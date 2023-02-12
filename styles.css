@@ -1,0 +1,74 @@
+/* 0. Variables */
+
+:root {
+  --border-black: slategray;
+}
+
+/* 1. Header Styles */
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+header > div {
+  font-family: 'Pacifico', cursive;
+  font-size: xx-large;
+}
+
+div span:nth-child(odd) {
+  color: dodgerblue;
+}
+
+div span:nth-child(even) {
+  color: crimson;
+}
+
+/* 2. Grid */
+
+.grid {
+  display: grid;
+  margin: 100px auto;
+  grid-template-columns: repeat(3, 1fr);
+  width: fit-content;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 2.1. Grid Borders */
+
+.cell:nth-child(n+1):nth-child(-n+2),
+.cell:nth-child(n+4):nth-child(-n+5),
+.cell:nth-child(n+7):nth-child(-n+8) {
+  border-right: 3px solid var(--border-black);
+}
+
+.cell:nth-child(n+1):nth-child(-n+3),
+.cell:nth-child(n+4):nth-child(-n+6) {
+  border-bottom: 3px solid var(--border-black);
+}
+
+/* 3. Tics and Tacs */
+
+.cell img {
+  width: 50px;
+}
+
+.circle {
+  filter: invert(36%) sepia(98%) saturate(1468%) hue-rotate(197deg) brightness(106%) contrast(103%);
+}
+
+.cross {
+  filter: invert(37%) sepia(97%) saturate(6570%) hue-rotate(337deg) brightness(85%) contrast(103%);
+}
