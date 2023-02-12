@@ -31,7 +31,7 @@ div span:nth-child(even) {
 
 .grid {
   display: grid;
-  margin: 100px auto;
+  margin: 50px auto;
   grid-template-columns: repeat(3, 1fr);
   width: fit-content;
 }
@@ -71,4 +71,39 @@ div span:nth-child(even) {
 
 .cross {
   filter: invert(37%) sepia(97%) saturate(6570%) hue-rotate(337deg) brightness(85%) contrast(103%);
+}
+
+/* 4. Popup Form */
+
+.popup-form {
+  display: flex;
+  flex-direction: column;
+  background-color: cornflowerblue;
+  color: white;
+  font-weight: bold;
+  width: 400px;
+  position: absolute;
+  padding: 10px;
+  gap: 5px;
+  left: 36%;
+  z-index: 2;
+  animation-name: appear;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in;
+  /* animation-play-state: paused; */
+}
+
+/* 5. Score Board */
+
+.score {
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  word-spacing: 25px;
+  height: 30px;
+  position: relative;
+}
+
+@keyframes appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
