@@ -19,7 +19,6 @@ const playerFactory = (name, mark, winCount) => {
 }
 
 const Board = () => {
-  let board = Array(9).fill(0);
   let isWon = false;
   const winningCombinations = [
     [0, 4, 8], [2, 4, 6], [0, 1, 2],
