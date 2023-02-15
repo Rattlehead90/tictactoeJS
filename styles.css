@@ -65,12 +65,21 @@ div span:nth-child(even) {
   width: 50px;
 }
 
+.cell {
+  transition: all 0.2s ease-out;
+}
+
 .circle {
   filter: invert(36%) sepia(98%) saturate(1468%) hue-rotate(197deg) brightness(106%) contrast(103%);
 }
 
 .cross {
   filter: invert(37%) sepia(97%) saturate(6570%) hue-rotate(337deg) brightness(85%) contrast(103%);
+}
+
+.cell:hover {
+  background-color: lightgray;
+  transition: all 0.2s ease-in;
 }
 
 /* 4. Popup Form */
@@ -80,6 +89,7 @@ div span:nth-child(even) {
   flex-direction: column;
   background-color: cornflowerblue;
   color: white;
+  border-radius: 10px;
   font-weight: bold;
   width: 400px;
   position: absolute;
@@ -90,7 +100,6 @@ div span:nth-child(even) {
   animation-name: appear;
   animation-duration: 0.7s;
   animation-timing-function: ease-in;
-  /* animation-play-state: paused; */
 }
 
 /* 5. Score Board */
@@ -102,6 +111,36 @@ div span:nth-child(even) {
   height: 30px;
   position: relative;
 }
+
+
+/* 6. Retry form */
+
+.popup-retry {
+  background-color: coral;
+  color: white;
+  font-weight: bold;
+  width: 400px;
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  position: absolute;
+  left: 35%;
+  top: 27%;
+  z-index: 3;
+  padding: 25px;
+  animation-name: appear;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in;
+}
+
+p:first-child {
+  text-align: center;
+  font-size: x-large;
+  font-family: 'Pacifico', cursive;
+}
+
 
 @keyframes appear {
   from { opacity: 0; }
